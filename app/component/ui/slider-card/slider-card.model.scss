@@ -1,0 +1,253 @@
+/* ============================================================
+   SliderCard — sc-* namespace (global SCSS, not CSS Module)
+   ============================================================ */
+
+$card-gap: 16px;
+$card-height-desktop: 300px;
+$card-height-tablet: 240px;
+$card-height-mobile: 220px;
+$nav-btn-size: 38px;
+$bp-tablet: 768px;
+$bp-mobile: 480px;
+
+/* ── Container ─────────────────────────────────────────────── */
+
+.sc-container {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+/* ── Section ────────────────────────────────────────────────── */
+
+.sc-section {
+  width: 100%;
+}
+
+/* ── Header ─────────────────────────────────────────────────── */
+
+.sc-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+  }
+}
+
+.sc-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #1a2b40;
+  background: #1a2b40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  &__img {
+    object-fit: contain;
+    filter: invert(1) brightness(2);
+  }
+
+  &__initials {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.5px;
+  }
+}
+
+.sc-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a2b40;
+  line-height: 1.2;
+
+  @media (max-width: $bp-mobile) {
+    font-size: 18px;
+  }
+}
+
+.sc-learn-more {
+  font-size: 14px;
+  color: #4a87b4;
+  text-decoration: none;
+  line-height: 1.5;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.sc-plus {
+  display: block;
+  font-size: 24px;
+  font-weight: 300;
+  color: #999;
+  line-height: 1;
+  text-align: right;
+}
+
+/* ── Slider wrapper ─────────────────────────────────────────── */
+
+.sc-slider-wrapper {
+  position: relative; /* anchor for overlaid nav on mobile */
+}
+
+/* ── Track ──────────────────────────────────────────────────── */
+
+.sc-track {
+  display: flex;
+  gap: $card-gap;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ── Card ───────────────────────────────────────────────────── */
+
+.sc-card {
+  /* Desktop: 3 cards with 2 gaps */
+  flex: 0 0 calc((100% - #{$card-gap} * 2) / 3);
+  height: $card-height-desktop;
+  scroll-snap-align: start;
+  overflow: hidden;
+  border-radius: 2px;
+
+  @media (max-width: $bp-tablet) {
+    /* Tablet: ~1.2 cards visible (hint of next) */
+    flex: 0 0 calc(100% - 48px);
+    height: $card-height-tablet;
+  }
+
+  @media (max-width: $bp-mobile) {
+    flex: 0 0 100%;
+    height: $card-height-mobile;
+  }
+}
+
+/* Card inner layouts */
+
+.sc-card__inner {
+  width: 100%;
+  height: 100%;
+
+  &--single {
+    position: relative;
+  }
+
+  &--grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 4px;
+  }
+
+  &--stack {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .sc-card__cell {
+      flex: 1;
+    }
+  }
+}
+
+.sc-card__cell {
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+  min-width: 0;
+}
+
+.sc-card__img {
+  object-fit: cover !important;
+}
+
+/* ── Navigation ─────────────────────────────────────────────── */
+
+/* Desktop: below track, right-aligned */
+.sc-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+
+  /* Mobile: absolute overlay on left / right sides of track */
+  @media (max-width: $bp-tablet) {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+    padding: 0;
+    pointer-events: none; /* let clicks pass through to track */
+  }
+}
+
+.sc-nav__btn {
+  width: $nav-btn-size;
+  height: $nav-btn-size;
+  border-radius: 50%;
+  border: 1.5px solid #aaa;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  padding: 0;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  pointer-events: all; /* re-enable inside the overlay group */
+
+  &:hover:not(:disabled) {
+    background: #f5f5f5;
+    border-color: #777;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  /* Desktop-only: no extra positioning needed */
+
+  /* Mobile: half-protruding off the track edges */
+  @media (max-width: $bp-tablet) {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.88);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    &--prev {
+      margin-left: -($nav-btn-size * 0.5);
+    }
+
+    &--next {
+      margin-right: -($nav-btn-size * 0.5);
+    }
+  }
+}
