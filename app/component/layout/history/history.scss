@@ -11,3 +11,8 @@
     height: 25px;
   }
 }
+.test-devider {
+  transform: rotate(90deg);
+  position: absolute;
+  left: calc(50% - 80px);
+}

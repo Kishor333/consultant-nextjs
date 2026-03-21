@@ -13,25 +13,33 @@ export default function HistoryScreen() {
         messageClass="md:!text-[16px] text-black/60"
       />
       <section className="w-full flex flex-wrap justify-between h-100 relative mt-4">
-        <div className="w-full md:w-[50%]">
+        <div className="w-full md:w-[50%] md:pr-10">
           <p className="text-gray-main text-[24px]">Consult2T</p>
           <p className="text-gray-main">{text.history.paragraph_one}</p>
           <p className="text-gray-main">{text.history.paragraph_two}</p>
         </div>
         {/* <div className="w-full > */}
 
-        <Image
+        {/* <Image
           className="history-divider w-full"
           src="image/border.svg"
           alt="border logo"
           width={100}
           height={30}
           priority
-        />
+        /> */}
         {/* </div> */}
-        <div className="w-full md:w-[40%] flex justify-center">
+        <div className="w-full md:w-[50%] flex justify-between items-start relative">
           <Image
-            className="w-full bg-right contain-content"
+            className="w-[55px]"
+            src="image/hor_divider.svg"
+            alt="border logo"
+            width={100}
+            height={30}
+            priority
+          />
+          <Image
+            className="pr-10 bg-right contain-content w-full md:!w-[480px]"
             src="image/history/history_background.svg"
             alt="border logo"
             width={100}
