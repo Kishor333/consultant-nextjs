@@ -4,6 +4,8 @@
   --background: #ffffff;
   --foreground: #171717;
   --black-light: rgba(0, 0, 0, 0.6);
+  --gray: #f6f8fb;
+  --gray-main: #605e5c;
 }
 
 @theme inline {
@@ -11,6 +13,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-gray-surface: var(--gray);
+  --color-gray-main: var(--gray-main);
 }
 /* 
 @media (prefers-color-scheme: dark) {

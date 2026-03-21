@@ -25,6 +25,7 @@ export default function GradientHeader({
           font-black tracking-tight leading-none uppercase
           bg-gradient-to-r from-[#1a1a1a] via-[#5a5a5a] to-[#9a9a9a] bg-clip-text text-transparent
         "
+        aria-label={text}
       >
         {text}
       </h2>

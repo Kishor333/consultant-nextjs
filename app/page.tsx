@@ -3,7 +3,12 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import text from "@/app/content/global-text.json";
 import { GradientHeader } from "@/app/component/ui";
-import { Projects, ProfileSection } from "@/app/component/layout";
+import {
+  Projects,
+  ProfileSection,
+  Affiliation,
+  HistoryScreen,
+} from "@/app/component/layout";
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -14,7 +19,7 @@ export default function Home() {
     }
   }, []);
   return (
-    <div className="flex flex-col bg-zinc-50 font-sans dark:bg-blac">
+    <div className="flex flex-col font-sans dark:bg-blac">
       <section
         aria-label="landing"
         className="relative main-container overflow-hidden"
@@ -80,8 +85,14 @@ export default function Home() {
       <section className="px-31.25 py-14">
         <Projects />
       </section>
-      <section className="px-31.25 py-14">
+      <section className="px-31.25 pt-14">
         <ProfileSection />
+      </section>
+      <section className="pb-14">
+        <Affiliation />
+      </section>
+      <section className="pb-14 px-31.25">
+        <HistoryScreen />
       </section>
       {/* <GradientHeader text="PROJECTS" /> */}
       {/* <image src="/app_logo.svg" height="1  0" /> */}

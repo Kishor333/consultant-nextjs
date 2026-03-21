@@ -32,7 +32,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: "Architect",
     email: "preti@gmail.com",
     bio: "Architect with a passion for residential and cultural space design.",
-    imageSrc: "/image/profile/profile.png",
+    imageSrc: "/image/profile/profile-1.png",
   },
   {
     id: "drolma",
@@ -42,7 +42,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: "Interior Designer",
     email: "drolma@gmail.com",
     bio: "Interior Designer specializing in contemporary and traditional fusion spaces.",
-    imageSrc: "/image/profile/profile.png",
+    imageSrc: "/image/profile/profile-2.png",
   },
   {
     id: "nerola",
@@ -52,7 +52,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: "Urban Planner",
     email: "nerola.r@gmail.com",
     bio: "Urban Planner focused on sustainable community development and public spaces.",
-    imageSrc: "/image/profile/profile.png",
+    imageSrc: "/image/profile/profile-3.png",
   },
   {
     id: "susmita",
@@ -62,7 +62,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: "Project Manager",
     email: "susmita.rai@gmail.com",
     bio: "Project Manager ensuring timely, high-quality delivery of architectural projects.",
-    imageSrc: "/image/profile/profile.png",
+    imageSrc: "/image/profile/profile-4.png",
   },
   {
     id: "ssherpa",
@@ -72,7 +72,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: "Structural Engineer",
     email: "s.sherpa@gmail.com",
     bio: "Structural Engineer bridging aesthetics and structural integrity in every project.",
-    imageSrc: "/image/profile/profile.png",
+    imageSrc: "/image/profile/profile-5.png",
   },
   {
     id: "lucas",
@@ -82,7 +82,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: "Landscape Architect",
     email: "lucas@gmail.com",
     bio: "Landscape Architect creating harmonious outdoor environments that complement built spaces.",
-    imageSrc: "/image/profile/profile.png",
+    imageSrc: "/image/profile/profile-6.webp",
   },
   {
     id: "lu33",
@@ -92,7 +92,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: "Landscape Architect",
     email: "lucas@gmail.com",
     bio: "Landscape Architect creating harmonious outdoor environments that complement built spaces.",
-    imageSrc: "/image/profile/profile.png",
+    imageSrc: "/image/profile/profile-2.png",
   },
   {
     id: "111",
@@ -102,7 +102,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: "Landscape Architect",
     email: "lucas@gmail.com",
     bio: "Landscape Architect creating harmonious outdoor environments that complement built spaces.",
-    imageSrc: "/image/profile/profile.png",
+    imageSrc: "/image/profile/profile-3.png",
   },
   {
     id: "2222",
@@ -112,7 +112,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: "Landscape Architect",
     email: "lucas@gmail.com",
     bio: "Landscape Architect creating harmonious outdoor environments that complement built spaces.",
-    imageSrc: "/image/profile/profile.png",
+    imageSrc: "/image/profile/profile-4.png",
   },
   {
     id: "22",
@@ -132,6 +132,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: "Landscape Architect",
     email: "lucas@gmail.com",
     bio: "Landscape Architect creating harmonious outdoor environments that complement built spaces.",
-    imageSrc: "/image/profile/profile.png",
+    imageSrc: "/image/profile/profile-1.png",
   },
 ];

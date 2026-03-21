@@ -80,13 +80,15 @@ function ProfileDisplay({ member }: { member: TeamMember }) {
       </div>
 
       {/* Right — info */}
-      <div className="ps-info">
+      <div className="ps-info z-3">
+        {/* <div> */}
         <h2 className="ps-info__name">
           {member.firstName} {member.lastName}
         </h2>
         <p className="ps-info__bio">{member.bio}</p>
         <p className="ps-info__email">{member.email}</p>
         <p className="ps-info__role">{member.role}</p>
+        {/* </div> */}
       </div>
     </div>
   );
@@ -134,7 +136,10 @@ export default function ProfileSection() {
                 role="listitem"
               >
                 {slotIdx > 0 && (
-                  <div className="ps-connector" aria-hidden="true" />
+                  <div
+                    className={`ps-connector ${slotIdx === 3 ? "!mb-[94px]" : ""} `}
+                    aria-hidden="true"
+                  />
                 )}
                 <Avatar
                   member={TEAM_MEMBERS[memberIdx]}

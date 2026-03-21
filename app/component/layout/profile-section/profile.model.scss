@@ -7,7 +7,7 @@ $blue: #3b5bd4;
 $name-color: #1a1a1a;
 $text-color: #555;
 $email-color: #444;
-$watermark-color: rgba(0, 0, 0, 0.055);
+$watermark-color: rgba(0, 0, 0, 0.085);
 $avatar-size-3: 56px; // outermost (distance 3)
 $avatar-size-2: 68px; // distance 2
 $avatar-size-1: 80px; // distance 1 (adjacent to active)
@@ -50,12 +50,16 @@ $bp-mobile: 480px;
   align-items: stretch;
   width: 100%;
   min-height: 480px;
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
+  position: relative;
 
   @media (max-width: $bp-tablet) {
     flex-direction: column;
     min-height: unset;
     margin-bottom: 24px;
+  }
+  @media (min-width: $bp-tablet) {
+    overflow: hidden;
   }
 }
 
@@ -65,6 +69,11 @@ $bp-mobile: 480px;
   position: relative;
   flex: 0 0 55%;
   overflow: hidden;
+
+  // z-index: 5;
+  @media (min-width: $bp-tablet) {
+    flex: 0 0 100%;
+  }
 
   @media (max-width: $bp-tablet) {
     flex: 0 0 auto;
@@ -94,11 +103,18 @@ $bp-mobile: 480px;
   &--first {
     top: 48px;
     left: -6px;
+    // @media (min-width: $bp-tablet) {
+    //   left: 16%;
+    // }
   }
 
   &--last {
     bottom: 52px;
     right: -8px;
+    @media (min-width: $bp-tablet) {
+      right: 20%;
+      bottom: 20%;
+    }
   }
 }
 
@@ -106,12 +122,19 @@ $bp-mobile: 480px;
   position: absolute;
   inset: 0;
   z-index: 1;
+  @media (min-width: $bp-tablet) {
+    left: -380px;
+  }
 
   &::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fafafa);
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      var(--background)
+    );
   }
 }
 
@@ -134,6 +157,11 @@ $bp-mobile: 480px;
   padding: 48px 32px 48px 48px;
   gap: 16px;
 
+  @media (min-width: $bp-tablet) {
+    position: absolute;
+    right: 0;
+    top: 104px;
+  }
   @media (max-width: $bp-tablet) {
     padding: 32px 24px;
     gap: 12px;
@@ -186,16 +214,20 @@ $bp-mobile: 480px;
 /* ── Carousel ────────────────────────────────────────────────── */
 
 .ps-carousel {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  top: -40px;
+  z-index: 1;
 }
 
 .ps-carousel__track {
   display: flex;
-  align-items: flex-end;
+  // align-items: flex-end;
+  align-items: center;
   justify-content: center;
   width: 100%;
   padding: 8px 0;
