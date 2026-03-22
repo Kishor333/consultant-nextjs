@@ -1,0 +1,170 @@
+// ─── Software section wrapper ────────────────────────────────────────────────
+
+.sw-section {
+  width: 100%;
+  background-image: url("/image/software/dark_background.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 0 48px;
+
+  @media (max-width: 768px) {
+    padding: 40px 0 36px;
+  }
+}
+
+// ─── Cards track ─────────────────────────────────────────────────────────────
+
+.sw-track {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 40px;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    gap: 0;
+    padding: 0 24px;
+  }
+}
+
+// ─── Single software card ────────────────────────────────────────────────────
+
+.sw-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 24px 28px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+  width: 200px;
+  min-height: 220px;
+  flex-shrink: 0;
+  transition: background 200ms ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 360px;
+    min-height: 340px;
+    padding: 36px 32px 36px;
+    gap: 28px;
+  }
+}
+
+.sw-card__name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
+}
+
+.sw-card__image-wrap {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.sw-card__image {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.sw-card__category {
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+// ─── Navigation row ──────────────────────────────────────────────────────────
+
+.sw-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+
+  @media (max-width: 768px) {
+    gap: 24px;
+    margin-top: 28px;
+  }
+}
+
+.sw-nav__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.25);
+  color: #333333;
+  cursor: pointer;
+  transition:
+    background 150ms ease,
+    opacity 150ms ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.35);
+  }
+
+  @media (max-width: 768px) {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+// ─── Dot indicators ──────────────────────────────────────────────────────────
+
+.sw-nav__dots {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sw-nav__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  padding: 0;
+  transition:
+    background 200ms ease,
+    transform 200ms ease;
+
+  &--active {
+    background: #e8b84b;
+    transform: scale(1.25);
+  }
+
+  &:hover:not(.sw-nav__dot--active) {
+    background: rgba(255, 255, 255, 0.6);
+  }
+}

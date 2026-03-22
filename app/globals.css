@@ -6,15 +6,25 @@
   --black-light: rgba(0, 0, 0, 0.6);
   --gray: #f6f8fb;
   --gray-main: #605e5c;
+  --dark-gray: #1a1a1a;
+  --dim-gray: #5a5a5a;
+  --cool-gray: #9a9a9a;
+  --color-surface-light: #fdfdfd;
+  /* --primary: #cda942; */
 }
 
 @theme inline {
+  /* --color-primary: var(--primary); */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-gray-surface: var(--gray);
   --color-gray-main: var(--gray-main);
+  --color-dark-gray: var(--dark-gray);
+  --color-dim-gray: var(--dim-gray);
+  --color-cool-gray: var(--cool-gray);
+  --color-surface-light: var(----color-surface-light);
 }
 /* 
 @media (prefers-color-scheme: dark) {

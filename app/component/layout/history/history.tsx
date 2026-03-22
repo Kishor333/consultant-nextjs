@@ -12,7 +12,7 @@ export default function HistoryScreen() {
         textMessage={text.history.quote}
         messageClass="md:!text-[16px] text-black/60"
       />
-      <section className="w-full flex flex-wrap justify-between h-100 relative mt-4">
+      <section className="w-full flex flex-wrap justify-between relative mt-4">
         <div className="w-full md:w-[50%] md:pr-10">
           <p className="text-gray-main text-[24px]">Consult2T</p>
           <p className="text-gray-main">{text.history.paragraph_one}</p>

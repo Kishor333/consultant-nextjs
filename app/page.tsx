@@ -8,6 +8,8 @@ import {
   ProfileSection,
   Affiliation,
   HistoryScreen,
+  SoftwareSection,
+  ContactUsSection,
 } from "@/app/component/layout";
 
 export default function Home() {
@@ -93,6 +95,12 @@ export default function Home() {
       </section>
       <section className="pb-14 px-31.25">
         <HistoryScreen />
+      </section>
+      <section className="pb-14 ">
+        <SoftwareSection />
+      </section>
+      <section className="p">
+        <ContactUsSection />
       </section>
       {/* <GradientHeader text="PROJECTS" /> */}
       {/* <image src="/app_logo.svg" height="1  0" /> */}

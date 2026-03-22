@@ -6,6 +6,7 @@ interface GradientHeaderProps {
   borderClass?: string;
   textMessage?: string;
   messageClass?: string;
+  contentType?: "light" | "dark";
 }
 
 export default function GradientHeader({
@@ -14,17 +15,20 @@ export default function GradientHeader({
   borderClass = "",
   textMessage = "",
   messageClass = "",
+  contentType = "dark",
 }: GradientHeaderProps) {
   return (
     <div
       className={`flex flex-col w-full  justify-center items-center ${className}`}
     >
       <h2
-        className="
+        className={`
           text-[24px] md:text-[32px]
           font-black tracking-tight leading-none uppercase
-          bg-gradient-to-r from-[#1a1a1a] via-[#5a5a5a] to-[#9a9a9a] bg-clip-text text-transparent
-        "
+          bg-gradient-to-r  bg-clip-text text-transparent
+           ${contentType === "dark" && "from-dark-gray via-dim-gray to-cool-gray"}
+           ${contentType === "light" && "from-white/90 via-surface-light to-white/20"}
+           `}
         aria-label={text}
       >
         {text}
@@ -32,7 +36,11 @@ export default function GradientHeader({
       <div className="w-full mt-4 flex justify-center mb-8">
         <Image
           className={`!w-auto ${borderClass}`}
-          src="image/border.svg"
+          src={
+            contentType === "dark"
+              ? "/image/border.svg"
+              : "/image/border_white.svg"
+          }
           alt="border logo"
           width={100}
           height={100}
@@ -40,7 +48,11 @@ export default function GradientHeader({
         />
       </div>
       <p
-        className={`text-center text-[14px] md:text-[16px] text-black/60  ${messageClass}`}
+        className={`text-center text-[14px] md:text-[16px] 
+           ${messageClass}
+
+           ${contentType === "light" && "text-white/80 w-[60%]"}
+           `}
       >
         “{textMessage}”
       </p>
