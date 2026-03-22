@@ -10,6 +10,7 @@ import {
   HistoryScreen,
   SoftwareSection,
   ContactUsSection,
+  FooterSection,
 } from "@/app/component/layout";
 
 export default function Home() {
@@ -101,6 +102,9 @@ export default function Home() {
       </section>
       <section className="p">
         <ContactUsSection />
+      </section>
+      <section className="p">
+        <FooterSection />
       </section>
       {/* <GradientHeader text="PROJECTS" /> */}
       {/* <image src="/app_logo.svg" height="1  0" /> */}

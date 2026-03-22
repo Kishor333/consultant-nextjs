@@ -1,0 +1,36 @@
+// .footer-bg {
+//   position: relative;
+//   background: url("/image/footer/footer_bg.svg") center/cover no-repeat;
+//   color: white;
+// }
+
+// /* overall dark overlay */
+// .footer-bg::before {
+//   content: "";
+//   position: absolute;
+//   inset: 0;
+
+//   background: rgba(0, 0, 0, 0.65);
+// }
+
+// /* center darker panel */
+// .footer-bg::after {
+//   content: "";
+//   position: absolute;
+
+//   top: 0;
+//   bottom: 0;
+
+//   left: 40%;
+//   width: 25%;
+
+//   background: rgba(0, 0, 0, 0.55);
+// }
+
+.mini-icon {
+  //   @apply bg-white size-[28px];
+  height: 28px;
+  width: 28px;
+  background: var(--white);
+  border-radius: 50%;
+}

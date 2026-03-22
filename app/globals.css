@@ -2,6 +2,7 @@
 
 :root {
   --background: #ffffff;
+  --white: #ffffff;
   --foreground: #171717;
   --black-light: rgba(0, 0, 0, 0.6);
   --gray: #f6f8fb;
@@ -10,7 +11,8 @@
   --dim-gray: #5a5a5a;
   --cool-gray: #9a9a9a;
   --color-surface-light: #fdfdfd;
-  /* --primary: #cda942; */
+  --golden-yellow: #cda942;
+  --teal-blue: #00516b;
 }
 
 @theme inline {
@@ -24,7 +26,10 @@
   --color-dark-gray: var(--dark-gray);
   --color-dim-gray: var(--dim-gray);
   --color-cool-gray: var(--cool-gray);
-  --color-surface-light: var(----color-surface-light);
+  --color-surface-light: var(--color-surface-light);
+  --color-white: var(--white);
+  --color-golden-yellow: var(--golden-yellow);
+  --color-teal-blue: var(--teal-blue);
 }
 /* 
 @media (prefers-color-scheme: dark) {
