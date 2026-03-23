@@ -54,7 +54,7 @@ export default function FooterScreen() {
               </p>
             </div>
             <div className="flex flex-wrap justify-between">
-              <div className="w-[25%]">
+              <div className="w-full md:w-[25%]">
                 <p className="text-[24px] font-bold mb-6">Address</p>
                 <div className="flex">
                   <div className="mini-icon flex items-center justify-center">
@@ -74,7 +74,7 @@ export default function FooterScreen() {
                   {/* </div> */}
                 </div>
               </div>
-              <div className="w-[25%]">
+              <div className="w-full md:w-[25%]">
                 <p className="text-[24px] font-bold mb-6">Contact</p>
                 {contactItem.map((item, index) => (
                   <div className="flex items-center mb-6" key={index}>
@@ -95,7 +95,7 @@ export default function FooterScreen() {
                   </div>
                 ))}
               </div>
-              <div className="w-[25%]">
+              <div className="w-full md:w-[25%]">
                 <p className="text-[24px] font-bold mb-6">Contact</p>
                 {socialItem.map((item, index) => (
                   <div className="flex items-center mb-6" key={index}>
@@ -124,7 +124,7 @@ export default function FooterScreen() {
                   </div>
                 ))}
               </div>
-              <div className="w-[25%] flex justify-center pl-4">
+              <div className="w-full md:w-[25%] flex justify-center pl-4">
                 <div>
                   <p className="text-[24px] mb-6 bg-golden-yellow px-1 text-black/60 font-light w-max">
                     Site Map

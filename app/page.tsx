@@ -11,6 +11,7 @@ import {
   SoftwareSection,
   ContactUsSection,
   FooterSection,
+  Navbar,
 } from "@/app/component/layout";
 
 export default function Home() {
@@ -23,9 +24,10 @@ export default function Home() {
   }, []);
   return (
     <div className="flex flex-col font-sans dark:bg-blac">
+      <Navbar />
       <section
         aria-label="landing"
-        className="relative main-container overflow-hidden"
+        className="relative main-container overflow-hidden mt-16 md:mt-16"
       >
         <div className="overlay"></div>
         {/* <div className="backgroundVideo"> */}
@@ -85,22 +87,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-31.25 py-14">
+      <section id="projects" className="px-31.25 py-14">
         <Projects />
       </section>
-      <section className="px-31.25 pt-14">
+      <section id="our-team" className="px-31.25 pt-14">
         <ProfileSection />
       </section>
-      <section className="pb-14">
+      <section id="affiliations" className="pb-14">
         <Affiliation />
       </section>
-      <section className="pb-14 px-31.25">
+      <section id="history" className="pb-14 px-31.25">
         <HistoryScreen />
       </section>
       <section className="pb-14 ">
         <SoftwareSection />
       </section>
-      <section className="p">
+      <section id="contact-us" className="p">
         <ContactUsSection />
       </section>
       <section className="p">
