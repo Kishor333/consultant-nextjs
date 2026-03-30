@@ -10,7 +10,13 @@ const CARD_GAP = 16; // px — must match $card-gap in scss
 
 // ─── Card layouts ────────────────────────────────────────────────────────────
 
-function CardSingle({ images, alts }: Pick<SlideCard, "images" | "alts">) {
+function CardSingle({
+  images,
+  alts,
+  description,
+}: Pick<SlideCard, "images" | "alts" | "description">) {
+  const [showDesc, setShowDesc] = useState(false);
+
   return (
     <div className="sc-card__inner sc-card__inner--single">
       <Image
@@ -20,6 +26,24 @@ function CardSingle({ images, alts }: Pick<SlideCard, "images" | "alts">) {
         sizes="(max-width: 480px) 100vw, (max-width: 768px) 80vw, 33vw"
         className="sc-card__img"
       />
+      {description && (
+        <>
+          <div className={`sc-card__overlay${showDesc ? " is-visible" : ""}`}>
+            <p className="sc-card__desc">{description}</p>
+          </div>
+          <button
+            className="sc-card__info-btn"
+            onClick={() => setShowDesc((v) => !v)}
+            aria-label={showDesc ? "Hide description" : "Show description"}
+          >
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <circle cx="7" cy="7" r="6" stroke="currentColor" strokeWidth="1.3" />
+              <line x1="7" y1="6.5" x2="7" y2="10" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+              <circle cx="7" cy="4.5" r="0.75" fill="currentColor" />
+            </svg>
+          </button>
+        </>
+      )}
     </div>
   );
 }
@@ -64,7 +88,7 @@ function CardItem({ card }: { card: SlideCard }) {
   return (
     <article className="sc-card">
       {card.layout === "single" && (
-        <CardSingle images={card.images} alts={card.alts} />
+        <CardSingle images={card.images} alts={card.alts} description={card.description} />
       )}
       {card.layout === "grid-2x2" && (
         <CardGrid2x2 images={card.images} alts={card.alts} />

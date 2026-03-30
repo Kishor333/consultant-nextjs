@@ -9,8 +9,11 @@ $text-color: #555;
 $email-color: #444;
 $watermark-color: rgba(0, 0, 0, 0.085);
 $avatar-size-3: 56px; // outermost (distance 3)
-$avatar-size-2: 68px; // distance 2
-$avatar-size-1: 80px; // distance 1 (adjacent to active)
+$avatar-size-2: 80px; // distance 2
+$avatar-size-1: 100px; // distance 1 (adjacent to active)
+// $avatar-size-3: 56px; // outermost (distance 3)
+// $avatar-size-2: 68px; // distance 2
+// $avatar-size-1: 80px; // distance 1 (adjacent to active)
 $avatar-size-active: 140px; // center active
 $connector-margin: 28px; // aligns connector with inactive avatar centre
 $bp-tablet: 768px;
@@ -241,7 +244,8 @@ $bp-mobile: 480px;
 
 .ps-carousel__item {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  // align-items: flex-end;
   flex-shrink: 0;
 }
 
@@ -253,7 +257,8 @@ $bp-mobile: 480px;
   border-top: 1.5px dashed #ccc;
   /* Lift line to roughly the vertical centre of inactive circles.
      Name label (~13px) + gap (8px) + half of avg inactive circle (~34px) ≈ 55px */
-  margin-bottom: 55px;
+  margin-bottom: 18px;
+  // margin-bottom: 55px;
 
   @media (max-width: $bp-mobile) {
     width: 16px;

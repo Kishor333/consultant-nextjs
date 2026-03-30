@@ -137,7 +137,7 @@ export default function ProfileSection() {
               >
                 {slotIdx > 0 && (
                   <div
-                    className={`ps-connector ${slotIdx === 3 ? "!mb-[94px]" : ""} `}
+                    className={`ps-connector ${slotIdx === 3 ? "" : ""} `}
                     aria-hidden="true"
                   />
                 )}

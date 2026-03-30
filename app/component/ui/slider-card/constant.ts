@@ -5,6 +5,7 @@ export interface SlideCard {
   /** Image paths relative to /public */
   images: string[];
   alts: string[];
+  description?: string;
 }
 
 export interface SliderCategory {
@@ -27,41 +28,50 @@ export const SLIDER_CATEGORIES: SliderCategory[] = [
         layout: "single",
         images: ["/image/interior/interor.png"],
         alts: ["Modern bedroom interior design"],
+        description:
+          "At Consult2T, we proactively shape sustainable and inclusive urban environments throughout Bhutan, with an unwavering commitment to respecting cultural heritage, upholding vital environmental values, and enhancing the collective well-being of its people.",
       },
       {
         layout: "single",
         images: ["/image/interior/interor.png"],
         alts: ["Modern bedroom interior design"],
+        description: "This is Modern room with modern bedroom",
       },
       {
         layout: "single",
         images: ["/image/interior/interor.png"],
         alts: ["Modern bedroom interior design"],
+        description: "This is Modern room with modern bedroom",
       },
       {
         layout: "single",
         images: ["/image/interior/interor.png"],
         alts: ["Modern bedroom interior design"],
+        description: "This is Modern room with modern bedroom",
       },
       {
         layout: "single",
         images: ["/image/interior/interor.png"],
         alts: ["Modern bedroom interior design"],
+        description: "This is Modern room with modern bedroom",
       },
       {
         layout: "single",
         images: ["/image/interior/interor.png"],
         alts: ["Modern bedroom interior design"],
+        description: "This is Modern room with modern bedroom",
       },
       {
         layout: "single",
         images: ["/image/interior/interor.png"],
         alts: ["Modern bedroom interior design"],
+        description: "This is Modern room with modern bedroom",
       },
       {
         layout: "single",
         images: ["/image/interior/interor.png"],
         alts: ["Modern bedroom interior design"],
+        description: "This is Modern room with modern bedroom",
       },
       //   {
       //     layout: "stack-2",
