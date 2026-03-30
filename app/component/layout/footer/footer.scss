@@ -34,3 +34,39 @@
   background: var(--white);
   border-radius: 50%;
 }
+
+.footer-test {
+  // min-height: 100vh;
+  color: white;
+  overflow: hidden;
+  position: relative;
+  // background-image: url("/image/footer/footer_test.svg");
+  // background-size: cover;
+  // background-position: top left;
+
+  // opacity: 0.25;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("/image/footer/footer_test.svg");
+    background-size: cover;
+
+    /* best default for dynamic layouts */
+    background-position: center;
+
+    opacity: 0.25;
+    z-index: -2;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.74);
+    z-index: -1;
+  }
+  // }
+}

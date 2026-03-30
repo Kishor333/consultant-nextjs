@@ -12,7 +12,7 @@ export default function Affiliation() {
         textMessage={text.affiliation}
         messageClass="md:!text-[16px] text-black/60"
       />
-      <div className="mt-12 px-31.25 ">
+      <div className="md:mt-12 md:px-31.25 md:py-14">
         <AffiliationCardSlider />
       </div>
     </section>

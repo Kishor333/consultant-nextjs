@@ -18,18 +18,9 @@ export default function HistoryScreen() {
           <p className="text-gray-main">{text.history.paragraph_one}</p>
           <p className="text-gray-main">{text.history.paragraph_two}</p>
         </div>
-        {/* <div className="w-full > */}
 
-        {/* <Image
-          className="history-divider w-full"
-          src="image/border.svg"
-          alt="border logo"
-          width={100}
-          height={30}
-          priority
-        /> */}
         {/* </div> */}
-        <div className="w-full md:w-[50%] flex justify-between items-start relative">
+        <div className="w-[calc(100%-55px)] md:w-[50%] flex justify-between items-start relative">
           <Image
             className="w-[55px]"
             src="image/hor_divider.svg"

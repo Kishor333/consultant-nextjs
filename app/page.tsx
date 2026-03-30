@@ -63,7 +63,7 @@ export default function Home() {
             priority
           />
         </div>
-        <div className="absolute w-200 h-auto bottom-[-38px] right-[-86px] z-4">
+        <div className="absolute w-full md:w-200 h-auto bottom-[-38px] right-[-86px] z-4">
           <Image
             // className="dark:invert"
             className="w-full object-cover"
@@ -87,16 +87,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="px-31.25 py-14">
+      <section id="projects" className="p-5 md:px-31.25 md:py-14">
         <Projects />
       </section>
-      <section id="our-team" className="px-31.25 pt-14">
+      <section id="our-team" className="p-5 md:px-31.25 md:py-14">
         <ProfileSection />
       </section>
       <section id="affiliations" className="pb-14">
         <Affiliation />
       </section>
-      <section id="history" className="pb-14 px-31.25">
+      <section id="history" className="pb-5 px-5 md:pb-14 md:px-31.25">
         <HistoryScreen />
       </section>
       <section className="pb-14 ">
