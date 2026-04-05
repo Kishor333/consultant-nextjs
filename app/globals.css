@@ -1,18 +1,55 @@
 @import "tailwindcss";
 
 :root {
+  /* ── Base ─────────────────────────────────────────────────── */
   --background: #ffffff;
   --white: #ffffff;
   --foreground: #171717;
+
+  /* ── Brand / Accent ──────────────────────────────────────── */
+  --golden-yellow: #cda942;
+  --golden-accent: #e8b84b;
+  --teal-blue: #00516b;
+  --blue-accent: #3b5bd4;
+  --navy: #1a2b40;
+  --link-blue: #4a87b4;
+
+  /* ── Neutrals — text ─────────────────────────────────────── */
   --black-light: rgba(0, 0, 0, 0.6);
-  --gray: #f6f8fb;
+  --charcoal: #333333;
+  --text-dark: #444;
+  --text-medium: #555;
   --gray-main: #605e5c;
   --dark-gray: #1a1a1a;
   --dim-gray: #5a5a5a;
   --cool-gray: #9a9a9a;
+  --text-muted: #999;
+  --text-subtle: #888;
+  --text-light: #777;
+
+  /* ── Neutrals — surfaces & borders ───────────────────────── */
+  --gray: #f6f8fb;
   --color-surface-light: #fdfdfd;
-  --golden-yellow: #cda942;
-  --teal-blue: #00516b;
+  --surface-hover: #f5f5f5;
+  --border-light: #e0e0e0;
+  --border-medium: #ccc;
+  --border-muted: #bbb;
+  --border-soft: #aaa;
+
+  /* ── Feedback ─────────────────────────────────────────────── */
+  --error-red: #dc2626;
+  --success-green: #16a34a;
+
+  /* ── Overlays ─────────────────────────────────────────────── */
+  --watermark: rgba(0, 0, 0, 0.085);
+  --overlay-dark: rgba(0, 0, 0, 0.74);
+
+  /* ── RGB channels (for rgba(var(…), alpha) usage) ─────────── */
+  --black-rgb: 0, 0, 0;
+  --white-rgb: 255, 255, 255;
+  --gray-rgb: 246, 248, 251;
+  --gold-accent-rgb: 242, 201, 5;
+  --teal-blue-rgb: 0, 81, 107;
 }
 
 @theme inline {
@@ -30,7 +67,12 @@
   --color-surface-light: var(--color-surface-light);
   --color-white: var(--white);
   --color-golden-yellow: var(--golden-yellow);
+  --color-golden-accent: var(--golden-accent);
   --color-teal-blue: var(--teal-blue);
+  --color-charcoal: var(--charcoal);
+  --color-navy: var(--navy);
+  --color-error: var(--error-red);
+  --color-success: var(--success-green);
 }
 /* 
 @media (prefers-color-scheme: dark) {

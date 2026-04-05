@@ -50,8 +50,8 @@ $bp-mobile: 480px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 2px solid #1a2b40;
-  background: #1a2b40;
+  border: 2px solid var(--navy);
+  background: var(--navy);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,7 +66,7 @@ $bp-mobile: 480px;
   &__initials {
     font-size: 12px;
     font-weight: 700;
-    color: #fff;
+    color: var(--white);
     letter-spacing: 0.5px;
   }
 }
@@ -75,7 +75,7 @@ $bp-mobile: 480px;
   margin: 0;
   font-size: 22px;
   font-weight: 600;
-  color: #1a2b40;
+  color: var(--navy);
   line-height: 1.2;
 
   @media (max-width: $bp-mobile) {
@@ -85,7 +85,7 @@ $bp-mobile: 480px;
 
 .sc-learn-more {
   font-size: 14px;
-  color: #4a87b4;
+  color: var(--link-blue);
   text-decoration: none;
   line-height: 1.5;
 
@@ -98,7 +98,7 @@ $bp-mobile: 480px;
   display: block;
   font-size: 24px;
   font-weight: 300;
-  color: #999;
+  color: var(--text-muted);
   line-height: 1;
   text-align: right;
 }
@@ -195,7 +195,7 @@ $bp-mobile: 480px;
   padding: 28px 14px 14px;
   background: linear-gradient(
     to top,
-    rgba(#00516b, 0.56) 60%,
+    rgba(var(--teal-blue-rgb), 0.56) 60%,
     transparent 100%
   );
   transform: translateY(100%);
@@ -224,7 +224,7 @@ $bp-mobile: 480px;
   margin: 0;
   font-size: 13px;
   line-height: 1.55;
-  color: #fff;
+  color: var(--white);
   font-weight: 400;
 }
 
@@ -244,8 +244,8 @@ $bp-mobile: 480px;
     height: 28px;
     border-radius: 50%;
     border: none;
-    background: rgba(255, 255, 255, 0.85);
-    color: #1a2b40;
+    background: rgba(var(--white-rgb), 0.85);
+    color: var(--navy);
     cursor: pointer;
     z-index: 2;
     padding: 0;
@@ -256,7 +256,7 @@ $bp-mobile: 480px;
     -webkit-backdrop-filter: blur(4px);
 
     &:hover {
-      background: rgba(255, 255, 255, 1);
+      background: var(--white);
       transform: scale(1.08);
     }
   }
@@ -288,13 +288,13 @@ $bp-mobile: 480px;
   width: $nav-btn-size;
   height: $nav-btn-size;
   border-radius: 50%;
-  border: 1.5px solid #aaa;
-  background: #fff;
+  border: 1.5px solid var(--border-soft);
+  background: var(--white);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #555;
+  color: var(--text-medium);
   padding: 0;
   transition:
     background 0.15s ease,
@@ -302,8 +302,8 @@ $bp-mobile: 480px;
   pointer-events: all; /* re-enable inside the overlay group */
 
   &:hover:not(:disabled) {
-    background: #f5f5f5;
-    border-color: #777;
+    background: var(--surface-hover);
+    border-color: var(--text-light);
   }
 
   &:disabled {
@@ -317,9 +317,9 @@ $bp-mobile: 480px;
   @media (max-width: $bp-tablet) {
     width: 44px;
     height: 44px;
-    background: rgba(255, 255, 255, 0.88);
-    border-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    background: rgba(var(--white-rgb), 0.88);
+    border-color: rgba(var(--white-rgb), 0.6);
+    box-shadow: 0 2px 8px rgba(var(--black-rgb), 0.15);
 
     &--prev {
       margin-left: -($nav-btn-size * 0.5);

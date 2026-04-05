@@ -2,12 +2,6 @@
    ProfileSection — ps-* namespace (global SCSS, not CSS Module)
    ============================================================ */
 
-$gold: #cda942;
-$blue: #3b5bd4;
-$name-color: #1a1a1a;
-$text-color: #555;
-$email-color: #444;
-$watermark-color: rgba(0, 0, 0, 0.085);
 $avatar-size-3: 56px; // outermost (distance 3)
 $avatar-size-2: 80px; // distance 2
 $avatar-size-1: 100px; // distance 1 (adjacent to active)
@@ -35,7 +29,7 @@ $bp-mobile: 480px;
   width: 100%;
   text-align: center;
   font-size: 15px;
-  color: $text-color;
+  color: var(--text-medium);
   letter-spacing: 0.01em;
   margin: 0 0 48px;
   padding: 0 24px;
@@ -94,7 +88,7 @@ $bp-mobile: 480px;
   position: absolute;
   font-size: clamp(72px, 9vw, 130px);
   font-weight: 800;
-  color: $watermark-color;
+  color: var(--watermark);
   text-transform: uppercase;
   letter-spacing: -4px;
   line-height: 1;
@@ -135,7 +129,7 @@ $bp-mobile: 480px;
     inset: 0;
     background: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0),
+      rgba(var(--white-rgb), 0),
       var(--background)
     );
   }
@@ -179,7 +173,7 @@ $bp-mobile: 480px;
     margin: 0;
     font-size: 28px;
     font-weight: 600;
-    color: $name-color;
+    color: var(--dark-gray);
     line-height: 1.2;
 
     @media (max-width: $bp-mobile) {
@@ -191,7 +185,7 @@ $bp-mobile: 480px;
     margin: 0;
     font-size: 15px;
     line-height: 1.65;
-    color: $text-color;
+    color: var(--text-medium);
     max-width: 440px;
 
     @media (max-width: $bp-mobile) {
@@ -202,14 +196,14 @@ $bp-mobile: 480px;
   &__email {
     margin: 0;
     font-size: 14px;
-    color: $email-color;
+    color: var(--text-dark);
   }
 
   &__role {
     margin: 0;
     font-size: 14px;
     font-weight: 500;
-    color: $blue;
+    color: var(--blue-accent);
     letter-spacing: 0.02em;
   }
 }
@@ -254,7 +248,7 @@ $bp-mobile: 480px;
 .ps-connector {
   width: 40px;
   flex-shrink: 0;
-  border-top: 1.5px dashed #ccc;
+  border-top: 1.5px dashed var(--border-medium);
   /* Lift line to roughly the vertical centre of inactive circles.
      Name label (~13px) + gap (8px) + half of avg inactive circle (~34px) ≈ 55px */
   margin-bottom: 18px;
@@ -294,7 +288,7 @@ $bp-mobile: 480px;
     padding 0.25s ease;
 
   .is-active & {
-    border-color: $gold;
+    border-color: var(--golden-yellow);
     padding: 4px;
   }
 }
@@ -308,7 +302,7 @@ $bp-mobile: 480px;
     height 0.3s ease,
     filter 0.3s ease;
   filter: grayscale(1);
-  border: 2px solid #e0e0e0;
+  border: 2px solid var(--border-light);
 
   /* Default (distance 2 fallback) */
   width: $avatar-size-2;
@@ -344,7 +338,7 @@ $bp-mobile: 480px;
 
 .ps-avatar__name {
   font-size: 12px;
-  color: $text-color;
+  color: var(--text-medium);
   white-space: nowrap;
   line-height: 1;
   min-width: $avatar-size-3;
@@ -353,7 +347,7 @@ $bp-mobile: 480px;
   .is-active & {
     font-weight: 500;
     font-size: 13px;
-    color: $name-color;
+    color: var(--dark-gray);
   }
 }
 
@@ -368,20 +362,20 @@ $bp-mobile: 480px;
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  border: 1.5px solid #bbb;
-  background: #fff;
+  border: 1.5px solid var(--border-muted);
+  background: var(--white);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #555;
+  color: var(--text-medium);
   padding: 0;
   transition:
     background 0.15s ease,
     border-color 0.15s ease;
 
   &:hover {
-    background: #f5f5f5;
-    border-color: #888;
+    background: var(--surface-hover);
+    border-color: var(--text-subtle);
   }
 }

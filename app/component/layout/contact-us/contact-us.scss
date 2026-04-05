@@ -20,10 +20,10 @@
   position: relative;
   width: 100%;
   // max-width: 1200px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(var(--black-rgb), 0.12);
   border-radius: 4px;
   // background: #bd1d1d;
-  background: #ffffff;
+  background: var(--white);
   overflow: hidden;
 }
 
@@ -98,11 +98,11 @@
 
     background: linear-gradient(
       109deg,
-      rgba(246, 248, 251, 0) 0%,
-      rgba(246, 248, 251, 1) 32%,
-      rgba(246, 248, 251, 1) 45%,
-      rgba(246, 248, 251, 1) 66%,
-      rgba(246, 248, 251, 0) 100%
+      rgba(var(--gray-rgb), 0) 0%,
+      rgba(var(--gray-rgb), 1) 32%,
+      rgba(var(--gray-rgb), 1) 45%,
+      rgba(var(--gray-rgb), 1) 66%,
+      rgba(var(--gray-rgb), 0) 100%
     );
     // }
   }
@@ -115,13 +115,13 @@
 .cu-title {
   font-size: 24px;
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.65);
+  color: rgba(var(--black-rgb), 0.65);
   margin-bottom: 28px;
 
   @media (max-width: 768px) {
     font-size: 22px;
     font-weight: 700;
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(var(--black-rgb), 0.8);
     margin-bottom: 24px;
   }
 }
@@ -135,29 +135,29 @@
 .cu-input,
 .cu-textarea {
   width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(var(--black-rgb), 0.2);
   border-radius: 6px;
   padding: 16px 20px;
   font-size: 16px;
-  color: #333;
-  background: #ffffff;
+  color: var(--charcoal);
+  background: var(--white);
   outline: none;
   transition: border-color 200ms ease;
 
   &::placeholder {
-    color: rgba(0, 0, 0, 0.35);
+    color: rgba(var(--black-rgb), 0.35);
     font-weight: 400;
   }
 
   &:focus {
-    border-color: rgba(0, 0, 0, 0.4);
+    border-color: rgba(var(--black-rgb), 0.4);
   }
 
   &--error {
-    border-color: #dc2626;
+    border-color: var(--error-red);
 
     &:focus {
-      border-color: #dc2626;
+      border-color: var(--error-red);
     }
   }
 
@@ -183,8 +183,8 @@
   padding: 16px;
   border: none;
   border-radius: 8px;
-  background: #333333;
-  color: #ffffff;
+  background: var(--charcoal);
+  color: var(--white);
   font-size: 17px;
   font-weight: 600;
   cursor: pointer;
@@ -194,7 +194,7 @@
   margin-top: 4px;
 
   &:hover:not(:disabled) {
-    background: #1a1a1a;
+    background: var(--dark-gray);
   }
 
   &:disabled {
@@ -207,7 +207,7 @@
 
 .cu-field-error {
   font-size: 13px;
-  color: #dc2626;
+  color: var(--error-red);
   margin-top: 6px;
   padding-left: 4px;
 }
@@ -220,10 +220,10 @@
   margin-top: 4px;
 
   &--success {
-    color: #16a34a;
+    color: var(--success-green);
   }
 
   &--error {
-    color: #dc2626;
+    color: var(--error-red);
   }
 }
