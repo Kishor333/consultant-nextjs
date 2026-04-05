@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { AFFILIATIONS, AffiliationItem } from "../constant";
 import "./affiliation-card.modal.scss";
+import text from "@/app/content/global-text.json";
 
 // ─── Single card ──────────────────────────────────────────────────────────────
 
@@ -12,11 +13,15 @@ const TRUNCATE_LENGTH = 200;
 function AffiliationCard({ item }: { item: AffiliationItem }) {
   const [expanded, setExpanded] = useState(false);
 
-  const isLong = item.description.length > TRUNCATE_LENGTH;
+  const desc = item.description
+    .split(".")
+    .reduce<unknown>((obj, key) => (obj as Record<string, unknown>)[key], text) as string;
+
+  const isLong = desc.length > TRUNCATE_LENGTH;
   const displayText =
     !expanded && isLong
-      ? item.description.slice(0, TRUNCATE_LENGTH).trimEnd() + "..."
-      : item.description;
+      ? desc.slice(0, TRUNCATE_LENGTH).trimEnd() + "..."
+      : desc;
 
   return (
     <div className="aff-card">

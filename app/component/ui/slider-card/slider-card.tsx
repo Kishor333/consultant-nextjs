@@ -3,7 +3,11 @@
 import { useRef, useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { SLIDER_CATEGORIES, SliderCategory, SlideCard } from "./constant";
+import {
+  PROJECT_SLIDER_CATEGORIES,
+  SliderCategory,
+  SlideCard,
+} from "./constant";
 import "./slider-card.model.scss";
 
 const CARD_GAP = 16; // px — must match $card-gap in scss
@@ -177,13 +181,15 @@ function CategorySlider({ category }: { category: SliderCategory }) {
               </span>
             )}
           </div>
-          <h3 className="sc-title">{category.title}</h3>
+          <h3 className="text-black/60 text-2xl font-medium">
+            {category.title}
+          </h3>
         </div>
 
         <div className="sc-header__right relative">
-          <Link href={category.learnMoreHref} className="sc-learn-more">
+          {/* <Link href={category.learnMoreHref} className="sc-learn-more">
             Learn More
-          </Link>
+          </Link> */}
           {/* <span className="sc-plus" aria-hidden="true">+</span> */}
           <div className="absolute size-10 top-7.5 right-[-30px]">
             <Image
@@ -268,7 +274,7 @@ function CategorySlider({ category }: { category: SliderCategory }) {
 export default function SliderCard() {
   return (
     <div className="sc-container">
-      {SLIDER_CATEGORIES.map((category) => (
+      {PROJECT_SLIDER_CATEGORIES.map((category) => (
         <CategorySlider key={category.id} category={category} />
       ))}
     </div>

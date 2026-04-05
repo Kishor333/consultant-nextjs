@@ -9,7 +9,7 @@ export default function Affiliation() {
       <GradientHeader
         text="AFFILIATION"
         className="justify-center"
-        textMessage={text.affiliation}
+        textMessage={text.affiliation.affiliation}
         messageClass="md:!text-[16px] text-black/60"
       />
       <div className="md:mt-12 md:px-31.25 md:py-14">

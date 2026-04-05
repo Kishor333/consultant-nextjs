@@ -27,7 +27,7 @@ export default function Home() {
       <Navbar />
       <section
         aria-label="landing"
-        className="relative main-container overflow-hidden mt-16 md:mt-16"
+        className="relative main-container overflow-hidden"
       >
         <div className="overlay"></div>
         {/* <div className="backgroundVideo"> */}
@@ -75,7 +75,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="w-full flex z-5 relative justify-center items-center mt-[160px]">
+        <div className="w-full flex z-5 relative justify-center items-center mt-[120px]">
           <div className="md:mx-[100px] lg:mx-[320px] px-4 py-8 sm:px-8 md:px-12 lg:px-16">
             <GradientHeader
               text="OUR VISION"

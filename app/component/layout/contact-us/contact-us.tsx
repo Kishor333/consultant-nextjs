@@ -131,9 +131,9 @@ export default function ContactUs() {
     >
       <div className="w-full pb-12">
         <GradientHeader
-          text="AFFILIATION"
+          text="CONTACT US"
           className="justify-center"
-          textMessage={text.affiliation}
+          textMessage={text.contact.contact_us}
           messageClass="md:!text-[16px] text-black/60"
         />
       </div>
@@ -161,7 +161,7 @@ export default function ContactUs() {
         <div className="cu-form-wrap mx-auto relative p-6">
           <div className="form-bg"></div>
           <div className="form-card">
-            <h2 className="cu-title">Got a project in mind?</h2>
+            <h2 className="cu-title">{text.contact.form_header}</h2>
 
             <form className="cu-form" onSubmit={handleSubmit}>
               <FormInput

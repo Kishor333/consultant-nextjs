@@ -19,8 +19,7 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 export const metadata: Metadata = {
-  title:
-    "Interior Design Consultant in Thimphu | Modern Home & Office Interiors",
+  title: "CONSULT2T",
   description:
     "Professional interior design consultant in Thimphu offering modern home, office, and commercial interior solutions tailored to your needs.",
   keywords: ["interior design", "home", "office", "Thimphu"],
