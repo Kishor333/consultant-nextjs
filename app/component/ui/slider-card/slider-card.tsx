@@ -36,9 +36,29 @@ function CardSingle({
             onClick={() => setShowDesc((v) => !v)}
             aria-label={showDesc ? "Hide description" : "Show description"}
           >
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <circle cx="7" cy="7" r="6" stroke="currentColor" strokeWidth="1.3" />
-              <line x1="7" y1="6.5" x2="7" y2="10" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              aria-hidden="true"
+            >
+              <circle
+                cx="7"
+                cy="7"
+                r="6"
+                stroke="currentColor"
+                strokeWidth="1.3"
+              />
+              <line
+                x1="7"
+                y1="6.5"
+                x2="7"
+                y2="10"
+                stroke="currentColor"
+                strokeWidth="1.4"
+                strokeLinecap="round"
+              />
               <circle cx="7" cy="4.5" r="0.75" fill="currentColor" />
             </svg>
           </button>
@@ -88,7 +108,11 @@ function CardItem({ card }: { card: SlideCard }) {
   return (
     <article className="sc-card">
       {card.layout === "single" && (
-        <CardSingle images={card.images} alts={card.alts} description={card.description} />
+        <CardSingle
+          images={card.images}
+          alts={card.alts}
+          description={card.description}
+        />
       )}
       {card.layout === "grid-2x2" && (
         <CardGrid2x2 images={card.images} alts={card.alts} />
