@@ -40,7 +40,7 @@ export const AFFILIATIONS: AffiliationItem[] = [
     id: "Jun02",
     name: "Jun02 Design Studio",
     description: "affiliation.Jun02",
-    logoSrc: "/image/affiliation/Jun02.svg",
+    logoSrc: "/image/affiliation/jun02.svg",
     logoAlt: "Jun02 Design Studio logo",
     logoWidth: 240,
     logoHeight: 80,
