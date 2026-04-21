@@ -221,6 +221,7 @@ export const PROJECT_SLIDER_CATEGORIES: SliderCategory[] = [
       },
     ],
   },
+
   //   {
   //     id: "urban-planning",
   //     iconSrc: "/image/icons/urban-icon.svg",

@@ -186,7 +186,7 @@ function CategorySlider({ category }: { category: SliderCategory }) {
           </h3>
         </div>
 
-        <div className="sc-header__right relative">
+        <div className="sc-header__right relative hidden! sm:block!">
           {/* <Link href={category.learnMoreHref} className="sc-learn-more">
             Learn More
           </Link> */}

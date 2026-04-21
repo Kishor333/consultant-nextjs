@@ -41,7 +41,7 @@ export default function Home() {
           className="backgroundVideo"
         />
         {/* </div> */}
-        <div className="absolute h-36.25 w-full bottom-0 left-0 z-4">
+        <div className="absolute w-full bottom-0 left-0 z-4">
           <Image
             // className="dark:invert"
             className="w-full object-cover"

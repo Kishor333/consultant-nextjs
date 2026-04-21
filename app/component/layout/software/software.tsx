@@ -64,10 +64,14 @@ function DotNav({
 export default function SoftwareSection() {
   const [page, setPage] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [isMidDevice, setIsMidDevice] = useState(false);
 
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 768px)");
+    // const md = window.matchMedia("(min-width: 769px) and (max-width: 1200px)");
+    // const mq = window.matchMedia("(max-width: 768px)");
     setIsMobile(mq.matches);
+
     const handler = (e: MediaQueryListEvent) => {
       setIsMobile(e.matches);
       setPage(0);
@@ -76,7 +80,21 @@ export default function SoftwareSection() {
     return () => mq.removeEventListener("change", handler);
   }, []);
 
-  const perPage = isMobile ? MOBILE_VISIBLE : DESKTOP_VISIBLE;
+  useEffect(() => {
+    // const mq = window.matchMedia("(max-width: 768px)");
+    const md = window.matchMedia("(min-width: 769px) and (max-width: 1200px)");
+    // const mq = window.matchMedia("(max-width: 768px)");
+    setIsMidDevice(md.matches);
+
+    const handler = (e: MediaQueryListEvent) => {
+      setIsMidDevice(e.matches);
+      setPage(0);
+    };
+    md.addEventListener("change", handler);
+    return () => md.removeEventListener("change", handler);
+  }, []);
+
+  const perPage = isMobile ? MOBILE_VISIBLE : isMidDevice ? 3 : DESKTOP_VISIBLE;
   const totalPages = Math.ceil(SOFTWARE_ITEMS.length / perPage);
 
   const visibleItems: SoftwareItem[] = useMemo(() => {
