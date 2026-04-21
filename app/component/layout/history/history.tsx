@@ -15,8 +15,10 @@ export default function HistoryScreen() {
       <section className="w-full flex flex-wrap justify-between relative mt-4">
         <div className="w-full md:w-[50%] md:pr-10">
           <p className="text-gray-main text-[24px]">Consult2T</p>
-          <p className="text-gray-main">{text.history.paragraph_one}</p>
-          <p className="text-gray-main">{text.history.paragraph_two}</p>
+          <p className="text-gray-main mt-4">{text.history.paragraph_one}</p>
+          <p className="text-gray-main mt-4 hidden md:block">
+            {text.history.paragraph_two}
+          </p>
         </div>
 
         {/* </div> */}
@@ -38,6 +40,7 @@ export default function HistoryScreen() {
             priority
           />
         </div>
+        <p className="text-gray-main md:hidden">{text.history.paragraph_two}</p>
       </section>
     </section>
   );

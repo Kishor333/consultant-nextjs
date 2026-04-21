@@ -146,6 +146,14 @@ export default function SoftwareSection() {
         </button>
 
         <DotNav count={totalPages} active={page} onSelect={setPage} />
+        <span
+          className="sw-nav__counter"
+          role="status"
+          aria-live="polite"
+          aria-label={`Slide ${page + 1} of ${totalPages}`}
+        >
+          {page + 1}/{totalPages}
+        </span>
 
         <button
           className="sw-nav__arrow"
