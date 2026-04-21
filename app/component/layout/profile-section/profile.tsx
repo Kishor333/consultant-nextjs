@@ -1,10 +1,9 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import Image from "next/image";
 import { TEAM_MEMBERS, SECTION_QUOTE, TeamMember } from "./constant";
 import "./profile.model.scss";
-import { GradientHeader } from "@/app/component/ui";
+import { GradientHeader, ImageLoader } from "@/app/component/ui";
 import text from "@/app/content/global-text.json";
 
 const VISIBLE_COUNT = 7;
@@ -40,7 +39,7 @@ function Avatar({
     >
       <div className="ps-avatar__ring">
         <div className="ps-avatar__circle">
-          <Image
+          <ImageLoader
             src={member.imageSrc}
             alt={member.displayName}
             fill
@@ -71,7 +70,7 @@ function ProfileDisplay({ member }: { member: TeamMember }) {
           {member.lastName}
         </span>
         <div className="ps-photo-wrap">
-          <Image
+          <ImageLoader
             src={member.imageSrc}
             alt={member.displayName}
             fill

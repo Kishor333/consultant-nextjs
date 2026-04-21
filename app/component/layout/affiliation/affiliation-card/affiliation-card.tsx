@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { AFFILIATIONS, AffiliationItem } from "../constant";
 import "./affiliation-card.modal.scss";
 import text from "@/app/content/global-text.json";
+import { ImageLoader } from "@/app/component/ui";
 
 // ─── Single card ──────────────────────────────────────────────────────────────
 
@@ -59,7 +59,7 @@ function AffiliationCard({ item }: { item: AffiliationItem }) {
 
       {/* Right — logo */}
       <div className="aff-card__logo-wrap">
-        <Image
+        <ImageLoader
           src={item.logoSrc}
           alt={item.logoAlt}
           width={item.logoWidth}

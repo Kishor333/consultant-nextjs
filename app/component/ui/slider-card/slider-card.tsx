@@ -8,6 +8,7 @@ import {
   SliderCategory,
   SlideCard,
 } from "./constant";
+import { ImageLoader } from "@/app/component/ui";
 import "./slider-card.model.scss";
 
 const CARD_GAP = 16; // px — must match $card-gap in scss
@@ -23,7 +24,7 @@ function CardSingle({
 
   return (
     <div className="sc-card__inner sc-card__inner--single">
-      <Image
+      <ImageLoader
         src={images[0]}
         alt={alts[0]}
         fill
@@ -77,7 +78,7 @@ function CardGrid2x2({ images, alts }: Pick<SlideCard, "images" | "alts">) {
     <div className="sc-card__inner sc-card__inner--grid">
       {images.slice(0, 4).map((src, i) => (
         <div key={i} className="sc-card__cell">
-          <Image
+          <ImageLoader
             src={src}
             alt={alts[i] ?? ""}
             fill
@@ -95,7 +96,7 @@ function CardStack2({ images, alts }: Pick<SlideCard, "images" | "alts">) {
     <div className="sc-card__inner sc-card__inner--stack">
       {images.slice(0, 2).map((src, i) => (
         <div key={i} className="sc-card__cell">
-          <Image
+          <ImageLoader
             src={src}
             alt={alts[i] ?? ""}
             fill

@@ -34,6 +34,7 @@ export default function Home() {
         <video
           ref={videoRef}
           src="/video/gmc_modal.webm"
+          poster="/video/poster.jpg"
           autoPlay
           muted
           loop

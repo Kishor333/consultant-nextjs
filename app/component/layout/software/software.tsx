@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useMemo, useEffect, useRef } from "react";
-import Image from "next/image";
 import {
   SOFTWARE_ITEMS,
   SoftwareItem,
@@ -10,7 +9,7 @@ import {
 } from "./constant";
 import "./software.scss";
 import text from "@/app/content/global-text.json";
-import { GradientHeader } from "@/app/component/ui";
+import { GradientHeader, ImageLoader } from "@/app/component/ui";
 
 // ─── Single card ─────────────────────────────────────────────────────────────
 
@@ -19,7 +18,7 @@ function SoftwareCard({ item }: { item: SoftwareItem }) {
     <div className="sw-card">
       <h3 className="sw-card__name">{item.name}</h3>
       <div className="sw-card__image-wrap">
-        <Image
+        <ImageLoader
           src={item.imageSrc}
           alt={item.imageAlt}
           width={120}
