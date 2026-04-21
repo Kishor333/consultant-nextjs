@@ -24,7 +24,7 @@ export default function HistoryScreen() {
         {/* </div> */}
         <div className="w-[calc(100%-55px)] md:w-[50%] flex justify-between items-start relative">
           <Image
-            className="w-[55px]"
+            className="w-10 sm:w-[55px]"
             src="image/hor_divider.svg"
             alt="border logo"
             width={100}

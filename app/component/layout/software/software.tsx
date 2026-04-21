@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import Image from "next/image";
 import {
   SOFTWARE_ITEMS,
@@ -105,6 +105,29 @@ export default function SoftwareSection() {
   const prev = () => setPage((p) => (p - 1 + totalPages) % totalPages);
   const next = () => setPage((p) => (p + 1) % totalPages);
 
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    const t = e.touches[0];
+    touchStartX.current = t.clientX;
+    touchStartY.current = t.clientY;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (touchStartX.current === null || touchStartY.current === null) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - touchStartX.current;
+    const dy = t.clientY - touchStartY.current;
+    touchStartX.current = null;
+    touchStartY.current = null;
+
+    const SWIPE_THRESHOLD = 40;
+    if (Math.abs(dx) < SWIPE_THRESHOLD || Math.abs(dx) < Math.abs(dy)) return;
+    if (dx < 0) next();
+    else prev();
+  };
+
   return (
     <section className="sw-section" aria-label="Software tools">
       <GradientHeader
@@ -115,7 +138,11 @@ export default function SoftwareSection() {
         contentType="light"
       />
       {/* Cards */}
-      <div className="sw-track mt-8">
+      <div
+        className="sw-track mt-8"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
         {visibleItems.map((item) => (
           <SoftwareCard key={item.id} item={item} />
         ))}
