@@ -156,7 +156,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop search icon */}
-        {/* <button className="nav__search" aria-label="Search">
+        <button className="nav__search" aria-label="Search">
           <svg
             width="18"
             height="18"
@@ -178,7 +178,7 @@ export default function Navbar() {
               strokeLinecap="round"
             />
           </svg>
-        </button> */}
+        </button>
 
         {/* Mobile hamburger */}
         <button
