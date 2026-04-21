@@ -49,7 +49,10 @@ function Avatar({
           />
         </div>
       </div>
-      <span className="ps-avatar__name">{member.displayName}</span>
+      <span className="ps-avatar__name">
+        {member.shortName}
+        {/* {member.firstName} {member.lastName} */}
+      </span>
     </button>
   );
 }
@@ -83,7 +86,8 @@ function ProfileDisplay({ member }: { member: TeamMember }) {
       <div className="ps-info z-3">
         {/* <div> */}
         <h2 className="ps-info__name">
-          {member.firstName} {member.lastName}
+          {/* {member.firstName} {member.lastName} */}
+          {member.displayName}
         </h2>
         <p className="ps-info__bio">{member.bio}</p>
         <p className="ps-info__email">{member.email}</p>

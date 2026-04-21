@@ -100,9 +100,10 @@ $bp-mobile: 480px;
   &--first {
     top: 48px;
     left: -6px;
-    // @media (min-width: $bp-tablet) {
-    //   left: 16%;
-    // }
+    @media (min-width: $bp-tablet) {
+      left: 16%;
+      // left: 180px;
+    }
   }
 
   &--last {
