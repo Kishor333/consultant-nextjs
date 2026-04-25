@@ -53,7 +53,7 @@ export default function Home() {
             priority
           />
         </div>
-        <div className="absolute h-36.25 w-full bottom-0 right-0 z-4">
+        {/* <div className="absolute h-36.25 w-full bottom-0 right-0 z-4">
           <Image
             // className="dark:invert"
             className="w-full object-cover"
@@ -63,7 +63,7 @@ export default function Home() {
             height={100}
             priority
           />
-        </div>
+        </div> */}
         <div className="absolute w-full md:w-200 h-auto bottom-[-38px] right-[-86px] z-4">
           <Image
             // className="dark:invert"

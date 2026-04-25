@@ -10,20 +10,17 @@ export default function FooterScreen() {
   const socialItem = [
     {
       label: "Instagram",
-      value:
-        "https://www.instagram.com/accounts/login/?next=/consult2t/&source=omni_redirect",
+      value: "https://www.instagram.com/consult2t?igsh=MTZmZWZmaWl3bnM2bA==",
       image: "image/footer/insta.svg",
     },
     {
       label: "FaceBook",
-      value:
-        "https://www.instagram.com/accounts/login/?next=/consult2t/&source=omni_redirect",
+      value: "https://www.facebook.com/share/18XTkypMCQ/",
       image: "image/footer/facebook.svg",
     },
     {
       label: "Linkedin",
-      value:
-        "https://www.instagram.com/accounts/login/?next=/consult2t/&source=omni_redirect",
+      value: "https://www.linkedin.com/company/consult2t/",
       image: "image/footer/lintin.svg",
     },
   ];
@@ -57,7 +54,7 @@ export default function FooterScreen() {
           <div className="flex flex-wrap justify-between">
             <div className="w-full md:w-[25%]">
               <p className="text-[24px] font-bold mb-6">Address</p>
-              <div className="flex">
+              <div className="flex md:pr-5">
                 <div className="mini-icon flex items-center justify-center">
                   <Image
                     className="object-fit w-[20px]"
@@ -110,7 +107,7 @@ export default function FooterScreen() {
                       priority
                     />
                   </div>
-                  <div className="text-[14px] ml-4 flex-1">
+                  <div className="text-[14px] pl-4 w-[calc(100%-40px)]">
                     <p className="font-bold text-white/80">{item.label}</p>
                     {/* <p className="flex-1 text-white/80">{item.value}</p> */}
                     <a
@@ -149,7 +146,7 @@ export default function FooterScreen() {
         </div>
         {/* </div> */}
       </div>
-      <div className="bg-teal-blue text-white w-full flex justify-center py-3">
+      <div className="text-[12px] md:text-[14px] bg-teal-blue text-white w-full flex justify-center py-3">
         <p className="m-0">
           &#64; {new Date().getFullYear()} {text.footer.all_right}
         </p>
