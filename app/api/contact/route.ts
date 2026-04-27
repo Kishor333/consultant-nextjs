@@ -7,7 +7,7 @@ export async function POST(req: NextRequest) {
   if (!name || !email || !message) {
     return NextResponse.json(
       { error: "All fields are required." },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
     await transporter.sendMail({
       from: `"${name}" <${process.env.SMTP_USER}>`,
       replyTo: email,
-      to: "kishorkumarmongar@gmail.com",
+      to: "consult2tshering@gmail.com",
       subject: `New Contact: ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
       html: `
@@ -41,7 +41,7 @@ export async function POST(req: NextRequest) {
   } catch {
     return NextResponse.json(
       { error: "Failed to send email. Please try again later." },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
