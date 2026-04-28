@@ -25,8 +25,12 @@ export const metadata: Metadata = {
   keywords: [
     "urban planning Bhutan",
     "architecture Thimphu",
+    "interior design Thimphu",
     "Local Area Plan Bhutan",
     "sustainable design Bhutan",
+    "interior design",
+    "consultant",
+    "architect",
     "Consult2T",
   ],
   authors: [{ name: "Consult2T" }],
