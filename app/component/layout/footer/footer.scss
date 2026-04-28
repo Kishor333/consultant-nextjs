@@ -1,0 +1,72 @@
+// .footer-bg {
+//   position: relative;
+//   background: url("/image/footer/footer_bg.svg") center/cover no-repeat;
+//   color: white;
+// }
+
+// /* overall dark overlay */
+// .footer-bg::before {
+//   content: "";
+//   position: absolute;
+//   inset: 0;
+
+//   background: rgba(0, 0, 0, 0.65);
+// }
+
+// /* center darker panel */
+// .footer-bg::after {
+//   content: "";
+//   position: absolute;
+
+//   top: 0;
+//   bottom: 0;
+
+//   left: 40%;
+//   width: 25%;
+
+//   background: rgba(0, 0, 0, 0.55);
+// }
+
+.mini-icon {
+  //   @apply bg-white size-[28px];
+  height: 28px;
+  width: 28px;
+  background: var(--white);
+  border-radius: 50%;
+}
+
+.footer-test {
+  // min-height: 100vh;
+  color: white;
+  overflow: hidden;
+  position: relative;
+  // background-image: url("/image/footer/footer_test.svg");
+  // background-size: cover;
+  // background-position: top left;
+
+  // opacity: 0.25;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("/image/footer/footer_test.svg");
+    background-size: cover;
+
+    /* best default for dynamic layouts */
+    background-position: center;
+
+    opacity: 0.25;
+    z-index: -2;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: var(--overlay-dark);
+    z-index: -1;
+  }
+  // }
+}

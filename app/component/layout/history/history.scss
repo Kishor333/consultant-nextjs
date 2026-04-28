@@ -1,0 +1,18 @@
+.history-divider {
+  @media (min-width: 768px) {
+    position: absolute;
+    //   width: 100% !important;
+    transform: rotate(90deg);
+    // absolute !w-full rotate-90
+    width: 57% !important;
+    left: 26%;
+    top: calc(50% - 40px);
+    // height: 116px;
+    height: 25px;
+  }
+}
+.test-devider {
+  transform: rotate(90deg);
+  position: absolute;
+  left: calc(50% - 80px);
+}

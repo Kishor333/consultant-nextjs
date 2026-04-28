@@ -1,0 +1,171 @@
+// ─── Slider wrapper ───────────────────────────────────────────────────────────
+
+.aff-slider {
+  width: 100%;
+  // max-width: 880px;
+  // margin: 0 auto;
+  padding: 0 56px;
+  background: linear-gradient(
+    to bottom right,
+    rgba(var(--gold-accent-rgb), 0.08) 0%,
+    rgba(var(--gold-accent-rgb), 0.16) 50%,
+    rgba(var(--gold-accent-rgb), 0.08) 100%
+  );
+}
+
+// ─── Card ─────────────────────────────────────────────────────────────────────
+
+.aff-card {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 40px 0 32px;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 0 24px;
+  }
+}
+
+// ─── Left: text body ──────────────────────────────────────────────────────────
+
+.aff-card__body {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.aff-card__title {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--dark-gray);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+
+  @media (max-width: 640px) {
+    font-size: 20px;
+  }
+}
+
+.aff-card__desc {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--black-light);
+}
+
+.aff-card__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dark-gray);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.65;
+  }
+}
+
+.aff-card__chevron {
+  transition: transform 200ms ease;
+
+  &--up {
+    transform: rotate(180deg);
+  }
+}
+
+// ─── Right: logo container ────────────────────────────────────────────────────
+
+.aff-card__logo-wrap {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray);
+  border: 1px solid rgba(var(--black-rgb), 0.12);
+  border-radius: 8px;
+
+  @media (max-width: 768px) {
+    width: 260px;
+    height: 148px;
+  }
+
+  @media (max-width: 640px) {
+    width: 100%;
+    height: 140px;
+  }
+}
+
+.aff-card__logo {
+  object-fit: contain;
+  max-width: 80%;
+  max-height: 70%;
+}
+
+// ─── Navigation row ───────────────────────────────────────────────────────────
+
+.aff-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
+.aff-nav__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--dark-gray);
+  border-radius: 50%;
+  transition: opacity 150ms ease;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+// ─── Dot indicators ───────────────────────────────────────────────────────────
+
+.aff-nav__dots {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.aff-nav__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(var(--black-rgb), 0.2);
+  cursor: pointer;
+  padding: 0;
+  transition:
+    background 200ms ease,
+    transform 200ms ease;
+
+  &--active {
+    background: var(--golden-accent);
+    transform: scale(1.2);
+  }
+
+  &:hover:not(.aff-nav__dot--active) {
+    background: rgba(var(--black-rgb), 0.4);
+  }
+}
