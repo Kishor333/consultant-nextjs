@@ -37,7 +37,7 @@ export default function FooterScreen() {
             priority
           /> */}
         {/* <div className="absolute inset-0 bg-black/74 py-15 px-31.25 text-white"> */}
-        <div className="px-5 py-8 md:py-15 md:px-31.25 text-white">
+        <div className="px-5 py-8 md:py-15 md:px-31.25 text-white w-full">
           <div className="flex flex-wrap justify-between mb-12">
             <Image
               className="object-fit w-[228px]"
