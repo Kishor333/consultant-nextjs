@@ -25,7 +25,7 @@ export default function FooterScreen() {
     },
   ];
   return (
-    <section className="w-full">
+    <footer className="w-full">
       <div className="flex flex-wrap footer-test">
         {/* <div className="w-full relative "> */}
         {/* <Image
@@ -101,7 +101,7 @@ export default function FooterScreen() {
                     <Image
                       className="object-fit w-[20px]"
                       src={item.image}
-                      alt={item.label + "icon"}
+                      alt={`${item.label} icon`}
                       width={24}
                       height={24}
                       priority
@@ -151,6 +151,6 @@ export default function FooterScreen() {
           &#64; {new Date().getFullYear()} {text.footer.all_right}
         </p>
       </div>
-    </section>
+    </footer>
   );
 }

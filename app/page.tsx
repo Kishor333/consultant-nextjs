@@ -25,6 +25,10 @@ export default function Home() {
   return (
     <div className="flex flex-col font-sans dark:bg-blac">
       <Navbar />
+      <h1 className="sr-only">
+        Consult2T — Urban Planning &amp; Architecture in Bhutan
+      </h1>
+      <main>
       <section
         aria-label="landing"
         className="relative main-container overflow-hidden"
@@ -39,15 +43,15 @@ export default function Home() {
           muted
           loop
           playsInline
+          aria-hidden="true"
           className="backgroundVideo"
         />
         {/* </div> */}
-        <div className="absolute w-full bottom-0 left-0 z-4">
+        <div aria-hidden="true" className="absolute w-full bottom-0 left-0 z-4">
           <Image
-            // className="dark:invert"
             className="w-full object-cover"
             src="image/yellow_wave.svg"
-            alt="wave logo"
+            alt=""
             width={100}
             height={100}
             priority
@@ -64,12 +68,11 @@ export default function Home() {
             priority
           />
         </div> */}
-        <div className="absolute w-full md:w-200 h-auto bottom-[-38px] right-[-86px] z-4">
+        <div aria-hidden="true" className="absolute w-full md:w-200 h-auto bottom-[-38px] right-[-86px] z-4">
           <Image
-            // className="dark:invert"
             className="w-full object-cover"
             src="image/group_house.svg"
-            alt="house logo"
+            alt=""
             width={100}
             height={100}
             priority
@@ -106,9 +109,8 @@ export default function Home() {
       <section id="contact-us" className="p">
         <ContactUsSection />
       </section>
-      <section className="p">
-        <FooterSection />
-      </section>
+      </main>
+      <FooterSection />
       {/* <GradientHeader text="PROJECTS" /> */}
       {/* <image src="/app_logo.svg" height="1  0" /> */}
       {/* <Image
