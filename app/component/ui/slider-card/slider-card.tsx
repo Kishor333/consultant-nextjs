@@ -218,7 +218,11 @@ function CategorySlider({ category }: { category: SliderCategory }) {
         </div>
 
         {/* Arrows — overlaid on mobile, below on desktop (CSS handles placement) */}
-        <div className="sc-nav" role="group" aria-label="Slider navigation">
+        <div
+          className="sc-nav z-10"
+          role="group"
+          aria-label="Slider navigation"
+        >
           <button
             className="sc-nav__btn sc-nav__btn--prev"
             onClick={() => scroll(-1)}
