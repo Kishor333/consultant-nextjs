@@ -159,17 +159,17 @@ export const TEAM_MEMBERS: TeamMember[] = [
     bio: "Pema Tshering is a Site Manager responsible for on-site management, overseeing day-to-day operations while maintaining accurate financial records across project sites.",
     imageSrc: "/image/profile/pema_tshering.png",
   },
-  {
-    id: "14",
-    firstName: "Tenzin",
-    lastName: "Yoezer",
-    displayName: "Tenzin Choyeng Yoezer",
-    shortName: "T.C. Yoezer",
-    role: "Accounts and Administration Officer",
-    email: "tenzinyoezer799@gmail.com",
-    bio: "Tenzin oversees the firm’s financial and administrative functions, managing accounts, maintaining records, and ensuring smooth day-to-day office operations.",
-    imageSrc: "/image/profile/tenzin_choyeng_yoezer.png",
-  },
+  // {
+  //   id: "14",
+  //   firstName: "Tenzin",
+  //   lastName: "Yoezer",
+  //   displayName: "Tenzin Choyeng Yoezer",
+  //   shortName: "T.C. Yoezer",
+  //   role: "Accounts and Administration Officer",
+  //   email: "tenzinyoezer799@gmail.com",
+  //   bio: "Tenzin oversees the firm’s financial and administrative functions, managing accounts, maintaining records, and ensuring smooth day-to-day office operations.",
+  //   imageSrc: "/image/profile/tenzin_choyeng_yoezer.png",
+  // },
 
   {
     id: "15",
